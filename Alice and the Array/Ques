@@ -1,0 +1,98 @@
+Alice is playing a game with permutations of size NN.
+
+She selects a random permutation PP of size NN and a random index ii (1\le i \le N)(1≤i≤N);
+She keeps incrementing the index ii until:
+The next element is greater than the current element (P_{(i+1)} > P_i)(P 
+(i+1)
+​
+ >P 
+i
+​
+ ), or;
+She reaches the last index (i = N)(i=N).
+Find the expected number of indices that Alice will visit throughout the game.
+
+It can be shown that this expected value can be expressed as a fraction \frac{P}{Q} 
+Q
+P
+​
+ , where PP and QQ are coprime integers, P \ge 0, Q \gt 0P≥0,Q>0 and QQ is coprime with 10^9 + 710 
+9
+ +7. You should compute P \cdot Q^{-1} \% (10^9 + 7)P⋅Q 
+−1
+ %(10 
+9
+ +7), where Q^{-1}Q 
+−1
+  denotes the multiplicative inverse of QQ modulo 10^9+710 
+9
+ +7.
+
+Note that a permutation of size NN consists of all integers from 11 to NN, where each element is present exactly once.
+
+Input Format
+The first line of input will contain a single integer TT, denoting the number of test cases.
+Each test case consists of single lines of input containing an integer NN, the size of permutation.
+Output Format
+For each test case, print in a single line, the expected number of indices that Alice will visit throughout the game.
+
+It can be shown that this expected value can be expressed as a fraction \frac{P}{Q} 
+Q
+P
+​
+ , where PP and QQ are coprime integers, P \ge 0, Q \gt 0P≥0,Q>0 and QQ is coprime with 10^9 + 710 
+9
+ +7. You should compute P \cdot Q^{-1} \% (10^9 + 7)P⋅Q 
+−1
+ %(10 
+9
+ +7), where Q^{-1}Q 
+−1
+  denotes the multiplicative inverse of QQ modulo 10^9+710 
+9
+ +7.
+
+Constraints
+1 \leq T \leq 10^31≤T≤10 
+3
+ 
+1 \leq N \leq 2\cdot 10^51≤N≤2⋅10 
+5
+ 
+The sum of NN over all test cases won't exceed 2\cdot 10^52⋅10 
+5
+ .
+Sample 1:
+Input
+Output
+3
+1
+2
+3
+1
+2500000
+03
+3888888
+93
+
+Explanation:
+Test case 11: There is only one possible way to select a permutation of size 11 and an index from the permutation 11. Thus, we choose P = \{1\}P={1} and i = 1i=1. The number of indices covered after this choice is 11.
+
+Test case 22: The possible cases are:
+
+P = \{1, 2\}P={1,2} and i = 1i=1: We cannot increment the index i=1i=1 as P_2 \gt P_1P 
+2
+​
+ >P 
+1
+​
+ . Thus, number of indices covered is 11.
+P = \{1, 2\}P={1,2} and i = 2i=2: We cannot increment the index i=2i=2 as it is the last index. Thus, number of indices covered is 11.
+P = \{2, 1\}P={2,1} and i = 1i=1: We can increment the index i=1i=1 as P_2 \lt P_1P 
+2
+​
+ <P 
+1
+​
+ . We reach index i = 2i=2. Now we cannot increment the index. Thus, number of indices covered is 22.
+P = \{2, 1\}P={2,1} and i = 2i=2: We cannot increment the index i=2i=2 as it is the last index. Thus, number of indices covered is 11.
