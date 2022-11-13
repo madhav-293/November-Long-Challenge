@@ -1,0 +1,50 @@
+You are given a binary string SS.
+In one operation, you can pick an index ii (1\le i \lt |S|)(1≤i<∣S∣) and swap the characters S_iS 
+i
+​
+  and S_{(i+1)}S 
+(i+1)
+​
+ .
+
+Find the minimum number of operations required, such that, the decimal representation of the final binary string is divisible by 33. If it is impossible to do so, print -1−1 instead.
+
+Input Format
+The first line of input will contain a single integer TT, denoting the number of test cases.
+Each test case consists of single line of input, containing a binary string SS.
+Output Format
+For each test case, output on a new line, the minimum number of operations required, such that, the decimal representation of the final binary string is divisible by 33. If it is impossible to do so, print -1−1 instead.
+
+Constraints
+1 \leq T \leq 10^51≤T≤10 
+5
+ 
+1 \leq |S| \leq 3\cdot 10^51≤∣S∣≤3⋅10 
+5
+ 
+SS consists of 00 and 11 only.
+The sum of |S|∣S∣ over all test cases won't exceed 3\cdot 10^53⋅10 
+5
+ .
+Sample 1:
+Input
+Output
+3
+0000
+111
+11001
+0
+-1
+1
+Explanation:
+Test case 11: There is no need to apply any operation since the decimal representation of 00000000 is 00 which is divisible by 33.
+
+Test case 22: It can be shown that we cannot make the decimal representation of the string divisible by 33 using any number of operations.
+
+Test case 33: The decimal representation of 1100111001 is 2525 . Using one operation, we pick i = 2i=2 and swap S_2S 
+2
+​
+  and S_3S 
+3
+​
+ . Thus, the string becomes 1010110101, whose decimal representation is 2121, which is divisible by 33.
